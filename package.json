@@ -6,11 +6,19 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "start-DB": "json-server --watch db.json --port 5000",
+    "serve": "concurrently \"npm run dev\" \"npm run start-DB\""
   },
   "dependencies": {
+    "json-server": "^0.17.3",
     "next": "13.2.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-icon": "^1.0.0",
+    "react-icons": "^4.8.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1"
   }
 }
